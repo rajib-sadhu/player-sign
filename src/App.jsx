@@ -7,11 +7,13 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Players from './components/Players/Players';
 import Sign from './components/Sign/Sign';
+// import { addValue } from './utilities/calculation';
 
 function App() {
 
   const [data, setData] = useState([]);
   const [sign, setSign] = useState([]);
+  const [ value, setValue ] = useState(0);
 
   useEffect(()=>{
     fetch('players.json')
@@ -23,13 +25,21 @@ function App() {
     
     let newSign = [];
     const exists = sign.find(sign_id=>sign_id.id===id);
+    const budget = 40000000000;
 
     if(!exists){
       const player = data.find(player_id => player_id.id==id )
       newSign = [...sign, player];
-      setSign(newSign);
-  
-      toast.success(`${player.name} Sign!`)
+
+
+      if(value<=budget){
+        addValue(player)
+        setSign(newSign);
+        toast.success(`${player.name} Sign!`);
+      }
+      else{
+        toast.error(`You have last ${budget-value} budget`) 
+      }
     }
     else{
       toast.error(`${exists.name} Already Sign!`)
@@ -38,15 +48,27 @@ function App() {
 
   const removeSign = id =>{
 
+    const removedPlayer=sign.find(p_id=>p_id.id===id);
+    setValue(value-removedPlayer.stats.value);
+    
     const remainPlayers = sign.filter(sign_id=>sign_id.id!==id)
     setSign(remainPlayers);
-    const removedPlayer=sign.find(p_id=>p_id.id===id);
-    toast.warn(`Removed ${removedPlayer.name}`)
+
+    toast.warn(`Removed ${removedPlayer.name}`);
+  
   }
   
   const removeAll = () =>{
     setSign([]);
+    setValue(0)
   }
+
+  const addValue = player =>{
+    const playerValue = player.stats.value;
+    setValue(value + playerValue);
+  }
+
+  console.log(value)
 
 
   return (
@@ -60,14 +82,14 @@ function App() {
         </section>
         {/*For show your players  */}
         <section className='player-sign col-span-1'>
-        <Sign sign={sign} removeSign={removeSign} removeAll={removeAll} />
+        <Sign sign={sign} removeSign={removeSign} removeAll={removeAll} value={value} />
         </section>
       </main>
 
       <Footer />
       <ToastContainer 
       position="top-center"
-      autoClose={2000}
+      autoClose={1000}
       theme="colored"
       />
     </div>
