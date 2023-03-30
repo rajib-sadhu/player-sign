@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Players from './components/Players/Players';
 import Sign from './components/Sign/Sign';
+import { addToDb, deleteShoppingCart, getPlayerSign, removeFromDb } from './utilities/fakedb';
 // import { addValue } from './utilities/calculation';
 
 function App() {
@@ -21,6 +22,26 @@ function App() {
     .then(data=>setData(data))
   },[]);
 
+  useEffect(()=>{
+
+    const storedPlayer = getPlayerSign();
+    const playerSign = [];
+
+    for(const id of storedPlayer){
+      const findPlayer = data.find(player=>player.id===id);
+      if(findPlayer){
+        playerSign.push(findPlayer);
+      }
+    }
+    
+    setSign(playerSign);
+    const preValue = playerSign.map(p=> p.stats.value )
+    const nowVal = preValue.reduce((a,c)=>a+c,0)
+    setValue(nowVal)
+
+  },[data])
+  
+
   const handleSign = id =>{
     
     let newSign = [];
@@ -31,6 +52,7 @@ function App() {
       const player = data.find(player_id => player_id.id==id )
       newSign = [...sign, player];
 
+      addToDb(id)
 
       // if(value<=budget){
         addValue(player)
@@ -54,13 +76,16 @@ function App() {
     const remainPlayers = sign.filter(sign_id=>sign_id.id!==id)
     setSign(remainPlayers);
 
+    removeFromDb(id);
+
     toast.warn(`Removed ${removedPlayer.name}`);
   
   }
   
   const removeAll = () =>{
     setSign([]);
-    setValue(0)
+    setValue(0);
+    deleteShoppingCart();
   }
 
   const addValue = player =>{

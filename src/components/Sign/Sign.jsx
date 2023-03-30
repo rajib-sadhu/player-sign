@@ -3,6 +3,8 @@ import { AiOutlineClose } from 'react-icons/ai';
 
 const Sign = ({ sign, removeSign, removeAll, value}) => { {/* */}
 
+// console.log(sign)
+
     if (sign.length === 0) {
         return (<></>)
     }
