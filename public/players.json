@@ -1,0 +1,162 @@
+[
+    {
+        "id":0,
+        "name": "Erling Haaland",
+        "age": 22,
+        "position":"Center Forward",
+        "team": "Manchester City",
+        "league": "English Premier League",
+        "nationality": "Norway",
+        "images": {
+            "playerImage":"https://cdn.vox-cdn.com/thumbor/5GuzXo20s1FYOMKNsm9cdHDlf-8=/0x0:4148x2905/1200x800/filters:focal(1808x608:2470x1270)/cdn.vox-cdn.com/uploads/chorus_image/image/71644757/1441228048.0.jpg",
+            "teamLogo":"https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/1200px-Manchester_City_FC_badge.svg.png",
+            "leagueLogo":"https://banner2.cleanpng.com/20180711/vg/kisspng-201617-premier-league-english-football-league-l-lion-emoji-5b460f06eeac18.5589169115313180229776.jpg",
+            "nationFlag":"https://cdn.britannica.com/01/3101-004-506325BB/Flag-Norway.jpg"
+            },
+        "stats":{
+            "trophy":3,
+            "value":13600000000,
+            "apperance":26
+        }
+    },
+    {
+        "id":1,
+        "name": "Neymar",
+        "age": 31,
+        "position":"Left Winger",
+        "team": "Paris SG",
+        "league": "Ligue 1",
+        "nationality": "Brazil",
+        "images": {
+            "playerImage":"https://www.planetsport.com/image-library/square/1200/b/brazil-neymar-celebrates-extra-time-goal-croatia-world-cup-dec22.jpg",
+            "teamLogo":"https://tmssl.akamaized.net/images/wappen/normquad/583.png?lm=1522312728",
+            "leagueLogo":"https://tmssl.akamaized.net/images/logo/normal/fr1.png?lm=1648360140",
+            "nationFlag":"https://tmssl.akamaized.net/images/flagge/tiny/26.png?lm=1520611569"
+            },
+        "stats":{
+            "trophy":6,
+            "value":5600000000,
+            "apperance":20
+        }
+    },
+    {
+        "id":2,
+        "name": "Lionel Messi",
+        "age": 35,
+        "position":"Right Winger",
+        "team": "Paris SG",
+        "league": "Ligue 1",
+        "nationality": "Argentina",
+        "images": {
+            "playerImage":"https://upload.wikimedia.org/wikipedia/commons/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg",
+            "teamLogo":"https://tmssl.akamaized.net/images/wappen/normquad/583.png?lm=1522312728",
+            "leagueLogo":"https://tmssl.akamaized.net/images/logo/normal/fr1.png?lm=1648360140",
+            "nationFlag":"https://tmssl.akamaized.net/images/flagge/tiny/9.png?lm=1520611569"
+            },
+        "stats":{
+            "trophy":6,
+            "value":3600000000,
+            "apperance":23
+        }
+    },
+    {
+        "id":3,
+        "name": "Cristiano Ronaldo",
+        "age": 38,
+        "position":"Center Forward",
+        "team": "Al-Nassr FC",
+        "league": "Saudi Pro League",
+        "nationality": "Portugal",
+        "images": {
+            "playerImage":"https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt943c9f051f0087c0/639f1d7d03c7a66c44782060/GettyImages-1245184407.jpg",
+            "teamLogo":"https://tmssl.akamaized.net/images/wappen/normquad/18544.png?lm=1612005240",
+            "leagueLogo":"https://tmssl.akamaized.net/images/logo/header/sa1.png?lm=1528219303",
+            "nationFlag":"https://tmssl.akamaized.net/images/flagge/tiny/136.png?lm=1520611569"
+            },
+        "stats":{
+            "trophy":10,
+            "value":1600000000,
+            "apperance":8
+        }
+    },
+    {
+        "id":4,
+        "name": "Kylian Mbappé",
+        "age": 24,
+        "position":"Center Forward",
+        "team": "Paris SG",
+        "league": "Ligue 1",
+        "nationality": "France",
+        "images": {
+            "playerImage":"https://www.planetsport.com/image-library/square/1200/k/kylian-mbappe-psg-france-3-april-2022.jpg",
+            "teamLogo":"https://tmssl.akamaized.net/images/wappen/normquad/583.png?lm=1522312728",
+            "leagueLogo":"https://tmssl.akamaized.net/images/logo/normal/fr1.png?lm=1648360140",
+            "nationFlag":"https://tmssl.akamaized.net/images/flagge/tiny/50.png?lm=1520611569"
+            },
+        "stats":{
+            "trophy":6,
+            "value":14400000000,
+            "apperance":24
+        }
+    },
+    {
+        "id":5,
+        "name": "Marcus Rashford",
+        "age": 25,
+        "position":"Left Winger",
+        "team": "Manchester United",
+        "league": "English Premier League",
+        "nationality": "England",
+        "images": {
+            "playerImage":"https://i2-prod.manchestereveningnews.co.uk/incoming/article26439055.ece/ALTERNATES/s1200c/0_rashford.jpg",
+            "teamLogo":"https://tmssl.akamaized.net/images/wappen/normquad/985.png?lm=1457975903",
+            "leagueLogo":"https://banner2.cleanpng.com/20180711/vg/kisspng-201617-premier-league-english-football-league-l-lion-emoji-5b460f06eeac18.5589169115313180229776.jpg",
+            "nationFlag":"https://tmssl.akamaized.net/images/flagge/tiny/189.png?lm=1520611569"
+            },
+        "stats":{
+            "trophy":4,
+            "value":6400000000,
+            "apperance":26
+        }
+    },
+    {
+        "id":6,
+        "name": "Frenkie de Jong",
+        "age": 25,
+        "position":"Central Midfield",
+        "team": "Barcelona",
+        "league": "LaLiga",
+        "nationality": "Netherlands",
+        "images": {
+            "playerImage":"https://imgresizer.eurosport.com/unsafe/1200x1200/smart/filters:format(jpeg)/origin-imgresizer.eurosport.com/2022/07/17/3412295-69726068-2560-1440.jpg",
+            "teamLogo":"https://tmssl.akamaized.net/images/wappen/normquad/131.png?lm=1406739548",
+            "leagueLogo":"https://tmssl.akamaized.net/images/logo/header/es1.png?lm=1557051003",
+            "nationFlag":"https://tmssl.akamaized.net/images/flagge/tiny/122.png?lm=1520611569"
+            },
+        "stats":{
+            "trophy":2,
+            "value":4800000000,
+            "apperance":24
+        }
+    },
+    {
+        "id":7,
+        "name": "Matthijs de Ligt",
+        "age": 23,
+        "position":"Central Back",
+        "team": "Bayern Munich",
+        "league": "Nundesliga",
+        "nationality": "Netherlands",
+        "images": {
+            "playerImage":"https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt5e5b2aa00df09142/62d8f379f1e10c396a0e0115/deligttt.jpg",
+            "teamLogo":"https://tmssl.akamaized.net/images/wappen/normquad/27.png?lm=1498251238",
+            "leagueLogo":"https://tmssl.akamaized.net/images/logo/header/l1.png?lm=1525905518",
+            "nationFlag":"https://tmssl.akamaized.net/images/flagge/tiny/122.png?lm=1520611569"
+            },
+        "stats":{
+            "trophy":3,
+            "value":6000000000,
+            "apperance":22
+        }
+    }
+]
