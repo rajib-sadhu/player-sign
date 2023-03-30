@@ -8,7 +8,7 @@ const Header = () => {
             </div>
             <div>
                 {/* <button className=' bg-sky-700 hover:bg-black md:text-xl text-sm text-white px-3 py-1 md:rounded-lg rounded-md'>Blog</button> */}
-                <a href="#my-modal-2" className="btn">Your Sign</a>
+                <a href="#my-modal-2" className="bg-sky-700 hover:bg-black md:text-xl text-sm text-white px-3 py-1 md:rounded-lg rounded-md">Your Sign</a>
             </div>
         </nav>
     );

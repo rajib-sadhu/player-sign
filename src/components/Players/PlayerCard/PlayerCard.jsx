@@ -7,31 +7,31 @@ const PlayerCard = ({data, handleSign}) => {
 
 
     return (
-        <div className='h-auto shadow-2xl rounded-xl p-4 overflow-hidden space-y-3'>
-            <div className='h-80 overflow-hidden rounded-xl'>
+        <div className='h-auto shadow-2xl rounded-xl md:p-4 p-1 overflow-hidden space-y-3'>
+            <div className='md:h-80 h-32 overflow-hidden rounded-xl'>
                 <img className='h-full w-full object-top object-cover hover:scale-110 ' src={images.playerImage} alt="" />
             </div>
-            <h1 className='text-2xl font-semibold text-center'> {name} </h1>
-            <div className='pl-4 font-medium space-y-1'>
+            <h1 className='md:text-2xl text-sm font-semibold text-center'> {name} </h1>
+            <div className='md:pl-4 md:text-lg text-[8px] font-medium space-y-1'>
                 <p>Age: {age} </p>
                 <p>Position: {position} </p>
 
                 <div className='flex items-center gap-2'>
                     <p>Team: {team}</p>
-                    <img className='w-5 h-5' src={images.teamLogo} alt="" />
+                    <img className='md:w-5 md:h-5 w-2 h-2' src={images.teamLogo} alt="" />
                 </div>
 
                 <div className='flex items-center gap-2'>
-                    <p>League: {league}</p>
-                    <img className='w-5 h-5' src={images.leagueLogo} alt="" />
+                    <p className=''>League: {league}</p>
+                    <img className='md:w-5 md:h-5 w-2 h-2' src={images.leagueLogo} alt="" />
                 </div>
 
                 <div className='flex items-center gap-2'>
                     <p>Nationality: {nationality}</p>
-                    <img className='w-4 h-3' src={images.nationFlag} alt="" />
+                    <img className='md:w-4 md:h-3' src={images.nationFlag} alt="" />
                 </div>
             </div>
-            <div className='grid grid-cols-3 text-center'>
+            <div className='grid grid-cols-3 text-center md:text-sm text-[6px]'>
                 <span className='border-r border-slate-400'>
                     <h4 className='font-semibold'>Matches</h4>
                     <p> {stats.apperance} </p>
