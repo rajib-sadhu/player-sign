@@ -25,21 +25,21 @@ function App() {
     
     let newSign = [];
     const exists = sign.find(sign_id=>sign_id.id===id);
-    const budget = 40000000000;
+    // const budget = 40000000000;
 
     if(!exists){
       const player = data.find(player_id => player_id.id==id )
       newSign = [...sign, player];
 
 
-      if(value<=budget){
+      // if(value<=budget){
         addValue(player)
         setSign(newSign);
         toast.success(`${player.name} Sign!`);
-      }
-      else{
-        toast.error(`You have last ${budget-value} budget`) 
-      }
+      // }
+      // else{
+      //   toast.error(`You have last ${budget-value} budget`) 
+      // }
     }
     else{
       toast.error(`${exists.name} Already Sign!`)
@@ -68,7 +68,7 @@ function App() {
     setValue(value + playerValue);
   }
 
-  console.log(value)
+  // console.log(value)
 
 
   return (

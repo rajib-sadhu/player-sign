@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 
-const Sign = ({ sign, removeSign, removeAll, value }) => {
+const Sign = ({ sign, removeSign, removeAll, value}) => { {/* */}
 
     if (sign.length === 0) {
         return (<></>)
@@ -13,8 +13,8 @@ const Sign = ({ sign, removeSign, removeAll, value }) => {
             <h1 className='text-xl uppercase font-semibold text-center'>Player Sign</h1>
 
             <div className='text-center text-xs font-bold border-2 m-2 p-2'>
-                <h2 className='text-red-700'>Total Budget: 4000Cr </h2>
-                {/* <h4 className=' text-sky-700'>Total Value: {(value + '').length >= 11 ? (value + '').slice(0, 4) + 'Cr' : (value + '').slice(0, 3) + 'Cr'} </h4> */}
+                {/* <h2 className='text-red-700'>Total Budget: 4000Cr </h2> */}
+                <h4 className=' text-sky-700'>Total Value: {(value + '').length >= 11 ? (value + '').slice(0, 4) + 'Cr' : (value + '').slice(0, 3) + 'Cr'} </h4>
             </div>
 
             <section className='mt-5 space-y-3'>
