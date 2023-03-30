@@ -78,7 +78,7 @@ function App() {
 
     removeFromDb(id);
 
-    toast.warn(`Removed ${removedPlayer.name}`);
+    toast.info(`Removed ${removedPlayer.name}`);
   
   }
   
@@ -98,7 +98,10 @@ function App() {
 
   return (
     <div className="App">
+      
+      <header className='sticky top-0 bg-black'>
       <Header />
+      </header>
 
       <main className='min-h-[38rem] main-container px-10 grid md:grid-cols-5 grid-cols-1'>
         {/* for show players */}

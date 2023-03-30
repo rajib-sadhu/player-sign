@@ -1,9 +1,10 @@
 import React from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 
-const Sign = ({ sign, removeSign, removeAll, value}) => { {/* */}
+const Sign = ({ sign, removeSign, removeAll, value }) => {
+    {/* */ }
 
-// console.log(sign)
+    // console.log(sign)
 
     if (sign.length === 0) {
         return (<></>)
@@ -14,9 +15,9 @@ const Sign = ({ sign, removeSign, removeAll, value}) => { {/* */}
         <div className='pl-5 pt-10 sticky top-0'>
             <h1 className='text-xl uppercase font-semibold text-center'>Player Sign</h1>
 
-            <div className='text-center text-xs font-bold border-2 m-2 p-2'>
+            <div className='text-center text-xs font-bold border m-2 p-2'>
                 {/* <h2 className='text-red-700'>Total Budget: 4000Cr </h2> */}
-                <h4 className=' text-sky-700'>Total Value: {(value + '').length >= 11 ? (value + '').slice(0, 4) + 'Cr' : (value + '').slice(0, 3) + 'Cr'} </h4>
+                <h4 className=' text-sky-300'>Total Value: {(value + '').length >= 11 ? (value + '').slice(0, 4) + 'Cr' : (value + '').slice(0, 3) + 'Cr'} </h4>
             </div>
 
             <section className='mt-5 space-y-3'>
@@ -28,10 +29,28 @@ const Sign = ({ sign, removeSign, removeAll, value}) => { {/* */}
             {
                 sign.length > 1
                     ?
-                    <button onClick={removeAll} className='mt-2 w-full text-red-700 hover:bg-red-500 hover:text-white font-semibold py-1'>Remove All</button>
+                    <button onClick={removeAll} className='mt-2 w-full text-red-400 hover:bg-red-500 hover:text-white font-semibold py-1'>Remove All</button>
                     :
                     ''
             }
+
+            {/* For Modal */}
+            <div className="modal" id="my-modal-2">
+                <div className="modal-box">
+                    <h3 className="font-bold text-lg">Your Signing Player</h3>
+                    <h4 className=' text-sky-300'>Total Value: {(value + '').length >= 11 ? (value + '').slice(0, 4) + 'Cr' : (value + '').slice(0, 3) + 'Cr'} </h4>
+                    <section className='mt-5 space-y-3'>
+                        {
+                            sign.map(s => <Player key={s.id} player={s} removeSign={removeSign} />)
+                        }
+                    </section>
+
+
+                    <div className="modal-action">
+                        <a href="#" className="btn">Close</a>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
@@ -44,7 +63,7 @@ const Player = ({ player, removeSign }) => {
 
 
     return (
-        <div className='w-full flex gap-2 items-center p-2 bg-slate-300 rounded-lg relative'>
+        <div className='w-full flex gap-2 items-center p-2 text-black bg-slate-300 rounded-lg relative'>
             <div className='w-20 h-20'>
                 <img className='w-full h-full object-cover object-top rounded-lg' src={images.playerImage} alt="" />
             </div>
