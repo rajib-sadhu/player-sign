@@ -39,16 +39,16 @@ function App() {
   const removeSign = id =>{
 
     const remainPlayers = sign.filter(sign_id=>sign_id.id!==id)
-
-    console.log(remainPlayers);
-
     setSign(remainPlayers);
-
     const removedPlayer=sign.find(p_id=>p_id.id===id);
     toast.warn(`Removed ${removedPlayer.name}`)
-
   }
   
+  const removeAll = () =>{
+    setSign([]);
+  }
+
+
   return (
     <div className="App">
       <Header />
@@ -60,7 +60,7 @@ function App() {
         </section>
         {/*For show your players  */}
         <section className='player-sign col-span-1'>
-        <Sign sign={sign} removeSign={removeSign} />
+        <Sign sign={sign} removeSign={removeSign} removeAll={removeAll} />
         </section>
       </main>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 
-const Sign = ({sign, removeSign}) => {
+const Sign = ({sign, removeSign, removeAll}) => {
 
     if(sign.length===0){
         return(<></>)
@@ -21,7 +21,7 @@ const Sign = ({sign, removeSign}) => {
             {
                 sign.length>1
                 ?
-                <button className='mt-2 w-full text-red-700 hover:bg-red-500 hover:text-white font-semibold py-1'>Remove All</button>
+                <button onClick={removeAll} className='mt-2 w-full text-red-700 hover:bg-red-500 hover:text-white font-semibold py-1'>Remove All</button>
                 :
                 ''
             }
