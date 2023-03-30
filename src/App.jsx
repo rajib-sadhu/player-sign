@@ -22,7 +22,6 @@ function App() {
   const handleSign = id =>{
     
     let newSign = [];
-
     const exists = sign.find(sign_id=>sign_id.id===id);
 
     if(!exists){
@@ -35,31 +34,40 @@ function App() {
     else{
       toast.error(`${exists.name} Already Sign!`)
     }
+  }
 
-   
+  const removeSign = id =>{
+
+    const remainPlayers = sign.filter(sign_id=>sign_id.id!==id)
+
+    console.log(remainPlayers);
+
+    setSign(remainPlayers);
+
+    const removedPlayer=sign.find(p_id=>p_id.id===id);
+    toast.warn(`Removed ${removedPlayer.name}`)
+
   }
   
-  // console.log(sign)
-
   return (
     <div className="App">
       <Header />
 
-      <main className='min-h-[38rem] main-container px-10'>
+      <main className='min-h-[38rem] main-container px-10 grid md:grid-cols-5 grid-cols-1'>
         {/* for show players */}
-        <section className='player-container'>
+        <section className='player-container col-span-4'>
           <Players data={data} handleSign={handleSign} />
         </section>
         {/*For show your players  */}
-        <section className='player-sign'>
-        <Sign sign={sign} />
+        <section className='player-sign col-span-1'>
+        <Sign sign={sign} removeSign={removeSign} />
         </section>
       </main>
 
       <Footer />
       <ToastContainer 
       position="top-center"
-      autoClose={3000}
+      autoClose={2000}
       theme="colored"
       />
     </div>

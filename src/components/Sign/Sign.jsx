@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 
-const Sign = ({sign}) => {
+const Sign = ({sign, removeSign}) => {
 
     if(sign.length===0){
         return(<></>)
@@ -14,17 +14,24 @@ const Sign = ({sign}) => {
 
             <section className='mt-5 space-y-3'>
                 {
-                    sign.map(s=><Player key={s.id} player={s} />  )
+                    sign.map(s=><Player key={s.id} player={s} removeSign={removeSign} />  )
                 }       
             </section>
-
+            
+            {
+                sign.length>1
+                ?
+                <button className='mt-2 w-full text-red-700 hover:bg-red-500 hover:text-white font-semibold py-1'>Remove All</button>
+                :
+                ''
+            }
         </div>
     );
 };
 
-const Player = ({player})=>{
+const Player = ({player, removeSign})=>{
 
-    const {images, name, stats} = player;
+    const {id,images, name, stats, age, nationality} = player;
 
 
 
@@ -34,12 +41,13 @@ const Player = ({player})=>{
             <div className='w-20 h-20'>
                 <img className='w-full h-full object-cover object-top rounded-lg' src={images.playerImage} alt="" />
             </div>
-            <div className='font-semibold' >
-                <h4 className='text-lg'> {name} </h4>
-                <p> {(stats.value+'').length >= 11? (stats.value+'').slice(0,4)+'Cr':(stats.value+'').slice(0,3)+'Cr' } </p>
+            <div className='font-semibold text-sm' >
+                <h4 className='text-lg'> {name} <span className='font-normal text-xs'>({age})</span> </h4> 
+                <p> Value: {(stats.value+'').length >= 11? (stats.value+'').slice(0,4)+'Cr':(stats.value+'').slice(0,3)+'Cr' } </p>
+                <p>Country: {nationality} </p>
             </div>
             <div className='absolute right-0 top-0'>
-                <button className='bg-red-500 hover:text-white p-1 rounded-bl-lg'> <AiOutlineClose/> </button>
+                <button onClick={()=>removeSign(id)} className='bg-red-500 hover:text-white p-1 rounded-bl-lg'> <AiOutlineClose/> </button>
             </div>
         </div>
     )
